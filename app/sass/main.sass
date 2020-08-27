@@ -71,7 +71,7 @@ body
 
 
 html, body
-  overflow-x: hidden
+  overflow-x: hidden !important
   -webkit-font-smoothing: antialiased
 
 img
@@ -123,11 +123,17 @@ a
   z-index: 1
 
 .main-sidebar__box
-  width: 100%
+  width: 315px
   padding: 48px 0 83px
   height: 100%
   background-image: linear-gradient(to top, #a3a4d2, #cecffb)
-
+  position: absolute
+  left: 0
+  top: 50px
+  z-index: 2
+  display: flex
+  flex-direction: column
+  align-items: center
 
 .main-menu
   display: flex
@@ -612,14 +618,14 @@ h2
   margin: 60px 0 0
   display: flex
   align-items: flex-start
-  justify-content: space-between
+  justify-content: flex-start
   flex-wrap: wrap
   position: relative
 
 .main-features-box
   color: #262b7d
   font-size: 21px
-  max-width: 500px
+  max-width: 40%
   width: 100%
   margin: 0 0 65px
   position: relative
@@ -637,57 +643,66 @@ h2
     background: #494ea3 url("../img/check.png") no-repeat center
       size: 14px
 
-  &:before
-    content: ''
-    position: absolute
+
+  .text
+    max-width: 500px
+    position: relative
+    &:before
+      content: ''
+      position: absolute
 
 
 .main-features-box1
-  &:before
-    bottom: -250px
-    right: -140px
-    width: 452px
-    height: 316px
-    background: url("../img/location 1.png") no-repeat center
-      size: contain
+  margin: 0 100px 0 0
+  .text
+    &:before
+      bottom: -250px
+      right: -140px
+      width: 452px
+      height: 316px
+      background: url("../img/location 1.png") no-repeat center
+        size: contain
 
 
 .main-features-box2
   margin: 20px 0 150px 0
-  max-width: 470px
+  .text
+    max-width: 470px
 
-  &:before
-    background: url("../img/location 2.png") no-repeat center
-      size: contain
-    width: 331px
-    height: 110px
-    left: -50px
-    bottom: -130px
+    &:before
+      background: url("../img/location 2.png") no-repeat center
+        size: contain
+      width: 331px
+      height: 110px
+      left: -90px
+      bottom: -130px
 
 .main-features-box3
-  margin: 0 0 170px
-  max-width: 460px
+  margin: 0 0 170px 0
+  .text
+    max-width: 460px
 
-  &:before
-    background: url("../img/location 3.png") no-repeat center
-      size: contain
-    width: 331px
-    height: 110px
-    left: -120px
-    bottom: -145px
+    &:before
+      background: url("../img/location 3.png") no-repeat center
+        size: contain
+      width: 331px
+      height: 110px
+      left: -150px
+      bottom: -145px
 
 .main-features-box4
   order: 1
-  margin: 0 0 185px auto
-  max-width: 430px
+  margin: 0 0 185px 800px
+  .text
+    max-width: 430px
 
-  &:before
-    background: url("../img/location 4.png") no-repeat center
-      size: contain
-    width: 461px
-    height: 106px
-    left: -180px
-    bottom: -145px
+    &:before
+      background: url("../img/location 4.png") no-repeat center
+        size: contain
+      width: 461px
+      height: 106px
+      left: -220px
+      bottom: -145px
 
 
 .main-features-certificate
@@ -704,9 +719,13 @@ h2
   color: #262b7d
   font-size: 21px
   font-style: italic
-  max-width: 430px
+  max-width: 40%
   width: 100%
-  margin: -40px 0 0
+  margin: -40px 120px 0 0
+  z-index: 1
+  position: relative
+  p
+    max-width: 430px
 
   sup
     font-size: 16.5px
@@ -753,7 +772,8 @@ h2
   width: 100%
   max-width: 1300px
   margin: 33px auto 0 0
-
+  position: relative
+  z-index: 1
   .slick-center
     .img-after, .twentytwenty-handle
       display: block
@@ -950,6 +970,8 @@ h2
   width: 100%
   margin: 0 auto 0 0
   max-width: 1300px
+  position: relative
+  z-index: 1
 
 //main-price
 .main-price
@@ -1097,6 +1119,7 @@ h2
   position: relative
   z-index: 1
   width: 100%
+  overflow-x: auto
 
 .table-price
   max-width: 980px
@@ -1540,7 +1563,6 @@ blockquote
     width: 100%
     height: 100%
     border: 10px solid #f5cadb
-    z-index: 1
 
 .gallery-bottom
   width: 100%
@@ -1611,7 +1633,18 @@ blockquote
   align-items: center
   justify-content: center
 
-
+.btn-burger
+  width: 20px
+  height: 15px
+  display: none
+  flex-direction: column
+  align-items: center
+  justify-content: space-between
+  span
+    display: block
+    width: 100%
+    height: 2px
+    background: #fff
 
 @import "media"
 // Всегда в конце

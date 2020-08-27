@@ -30,3 +30,18 @@ $('.result-box__photo').twentytwenty({
     move_slider_on_hover: false,
     no_overlay: true,
 });
+
+$('.gallery-slider-top').slick({
+    slidesToShow: 2,
+    asNavFor: '.gallery-slider-bottom',
+    arrows: false,
+    variableWidth: true
+});
+
+$('.gallery-slider-bottom').slick({
+    slidesToShow: 3,
+    asNavFor: '.gallery-slider-top',
+    appendArrows: '.gallery-slider__nav',
+    prevArrow: '<button type="button" class="slick-prev"><img src="../img/arr-left.png" alt=""></button>',
+    nextArrow: '<button type="button" class="slick-next"><img src="../img/arr-right.png" alt=""></button>',
+});

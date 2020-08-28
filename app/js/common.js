@@ -75,3 +75,4 @@ $('.gallery-slider-bottom').slick({
         }
     ]
 });
+omparison('.result-box__photo');

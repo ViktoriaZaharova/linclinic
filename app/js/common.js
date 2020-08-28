@@ -16,8 +16,8 @@ $('.result-slider').slick({
     variableWidth: true,
     draggable: false,
     swipe: false,
-    prevArrow: '<button type="button" class="slick-prev"><img src="../img/arrow-left.png" alt=""></button>',
-    nextArrow: '<button type="button" class="slick-next"><img src="../img/arrow-right.png" alt=""></button>',
+    prevArrow: '<button type="button" class="slick-prev"><img src="img/arrow-left.png" alt=""></button>',
+    nextArrow: '<button type="button" class="slick-next"><img src="img/arrow-right.png" alt=""></button>',
     appendArrows: '.result-slider__nav',
 });
 
@@ -56,8 +56,8 @@ $('.gallery-slider-bottom').slick({
     slidesToShow: 3,
     asNavFor: '.gallery-slider-top',
     appendArrows: '.gallery-slider__nav',
-    prevArrow: '<button type="button" class="slick-prev"><img src="../img/arr-left.png" alt=""></button>',
-    nextArrow: '<button type="button" class="slick-next"><img src="../img/arr-right.png" alt=""></button>',
+    prevArrow: '<button type="button" class="slick-prev"><img src="img/arr-left.png" alt=""></button>',
+    nextArrow: '<button type="button" class="slick-next"><img src="img/arr-right.png" alt=""></button>',
     responsive: [
         {
             breakpoint: 1520,

@@ -10,45 +10,56 @@ $('#fullpage').fullpage({
 });
 
 
-
 $('.result-slider').slick({
     slidesToShow: 3,
     slidesToScroll: 1,
     centerMode: true,
     variableWidth: true,
-    draggable: false,
-    swipe: false,
+    // autoplay: true,
+    autoplaySpeed: 2000,
+    pauseOnHover: false,
+    // draggable: false,
+    // swipe: false,
     prevArrow: '<button type="button" class="slick-prev"><img src="img/arrow-left.png" alt=""></button>',
     nextArrow: '<button type="button" class="slick-next"><img src="img/arrow-right.png" alt=""></button>',
     appendArrows: '.result-slider__nav',
 });
 
 
-$('.result-box__photo').twentytwenty({
-    move_slider_on_hover: false,
-    no_overlay: true,
+$('.yes_no').click(function () {
+    $(this).toggleClass('active');
 });
 
-$('.result-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-    // console.log(nextSlide);
-    $('.result-box__photo').twentytwenty({
-        move_slider_on_hover: false,
-        no_overlay: true,
-    });
-});
+// $('.result-box__photo').twentytwenty({
+//     move_slider_on_hover: false,
+//     no_overlay: true,
+// });
+
+// $('.result-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+//     // console.log(nextSlide);
+//     $('.result-box__photo').twentytwenty({
+//         move_slider_on_hover: false,
+//         no_overlay: true,
+//     });
+// });
 
 $(".result-slider").on('afterChange', function (event, slick, currentSlide) {
     $(".cp").text(currentSlide < 10 ? `${currentSlide + 1}` : currentSlide + 1);
-    $('.result-box__photo').twentytwenty({
-        move_slider_on_hover: false,
-        no_overlay: true,
-    });
 });
 
 $('.btn-burger').click(function () {
-   $('.main-sidebar__box').fadeToggle();
+    $('.overlay-menu').fadeToggle();
+    $(this).toggleClass('click');
+    $('.main-sidebar__box').fadeToggle();
 });
 
+$('.overlay-menu').click(function () {
+    $(this).fadeOut();
+    $('.btn-burger').removeClass('click');
+    $('.main-sidebar__box').fadeOut();
+});
+
+$('.main-features-certificate').fancybox();
 
 
 $('.gallery-slider-top').slick({

@@ -45,6 +45,9 @@
     width: 500px
     padding: 50px 70px 30px
 
+  .main-features-certificate
+    width: 260px
+
 @media only screen and (max-width : 1620px)
   .about-services__images
     width: 500px
@@ -125,6 +128,15 @@
     justify-content: space-between
     padding: 0 15px 0 0
 
+  .main-features-box
+    max-width: 36%
+
+  .result-box
+    width: 270px
+
+  .result-slider .slick-center .result-box
+    margin: 20px 0 49px
+
 @media only screen and (max-width : 1440px)
   .main-home__img
     max-width: 600px
@@ -150,10 +162,14 @@
   .main-about__box
     margin: 0
     padding: 40px 70px 194px 320px
-    font-size: 16px
+    font-size: 20px
+
+  .main-features-description, .main-features-box
+    font-size: 18px
+    max-width: 36%
 
   .main-about__title
-    font-size: 28px
+    font-size: 32px
 
   .main-features-certificate
     width: 250px
@@ -198,6 +214,17 @@
 
   .footer-box-info
     max-width: 360px
+
+@media only screen and (max-width : 1420px)
+  .result-slider .slick-center .result-box
+    padding: 50px 30px
+    width: 400px
+
+  .result-slider .slick-center .result-box__photo
+    height: 350px
+
+  .result-box
+    margin: 120px 30px 49px
 
 @media only screen and (max-width : 1380px)
   .main-features-box
@@ -267,6 +294,9 @@
 
   .about-services .vertical-scrolling__wrapper
     padding: 0 40px
+
+  .result-box
+    width: 250px
 
 @media only screen and (max-width : 1270px)
   .table-price, .main-price__advantages
@@ -431,6 +461,11 @@
     overflow-y: auto
     .btn
       margin: 0 auto
+    .logo
+      display: none
+
+  .main-menu
+    margin-top: 0
 
   .vertical-scrolling__wrapper
     width: 100%
@@ -456,7 +491,7 @@
     margin: -120px auto 0
 
   .indications .vertical-scrolling__wrapper:before
-    display: none
+
 
   .indications .vertical-scrolling__wrapper
     max-width: none
@@ -491,6 +526,14 @@
       width: 100%
       padding: 0 15px
 
+  .main-header
+    .logo
+      display: flex
+      margin: 0 auto 0 0
+      max-width: 40px
+    .container
+      padding: 0 15px
+
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
   .main-about__content
@@ -516,6 +559,9 @@
     letter-spacing: 1.5px
     font-size: 22px
 
+  .main-about__box
+    font-size: 16px
+
   .result-slider .slick-center .result-box
     width: 400px
     padding: 20px 30px
@@ -532,6 +578,9 @@
     height: 450px
     right: -200px
 
+  .main-header .phone
+    margin: 0 10px 0 0
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 690px)
   .phone
@@ -541,7 +590,7 @@
     padding: 80px 0 50px 30px
 
   .main-home__text
-    font-size: 20px
+    font-size: 24px
     margin: 0 0 20px
 
   .main-home__subtitle
@@ -612,7 +661,8 @@
     height: 300px
 
   .about-services:before
-    display: none
+    z-index: 0
+    bottom: 0
 
   .about-services .vertical-scrolling__wrapper
     padding: 0 15px
@@ -665,14 +715,29 @@
   .main-header .container
     justify-content: space-between
 
-  .main-header .phone
-    margin: 0
+  .main-header
+    .phone
+      margin: 0
+      display: none
+    .phone-mobile
+      display: flex
+      margin: 0 20px 0 0
 
   .main-about__box
     padding: 30px
 
   .main-about__img
+    position: relative
+    left: 0
+    top: 0
+    margin: -180px 0 0 auto
+
+  .main-home__img
     display: none
+
+  .main-about__content
+    flex-wrap: wrap
+    padding-top: 0
 
   .main-about__advantages-wrap
     width: 280px
@@ -689,11 +754,33 @@
   .main-features-img
     width: 180px
 
-  .main-features-description, .main-features-box
+  .main-features-box
     font-size: 16px
+
+  .main-features-description
+    display: none
+
+  .d-mobile
+    display: block
+
+  .result-slider .slick-center .result-box
+    margin: 20px 0 29px
 
   .main-features__content
     margin: 30px 0 0
+
+  .main-about__advantages-wrap
+    height: 170px
+    padding: 20px
+    width: 260px
+
+  .main-about__advantages-icon
+    width: 55px
+    height: 55px
+    margin: 0 auto 10px
+
+  .list-check li, .list-close li
+    margin: 0 0 15px
 
 @media only screen and (max-width : 480px)
   .table-price
@@ -713,24 +800,30 @@
     height: 90px
     left: 64%
 
+  .adv-box
+    width: 48%
+    font-size: 14px
+    height: 130px
+    &:before
+      left: -10px
+      bottom: -10px
+      height: 100%
+
+  .adv-box__wrapper
+    height: 100%
+    width: 100%
+
+  .adv-box__icon
+    height: 35px
+    margin: 0 auto 10px
+
 @media only screen and (max-width : 440px)
   .main-header
-    padding: 10px 0 0
+    padding: 10px 0
     .container
       justify-content: space-around
       padding: 0 30px
-      .phone
-        text-align: center
-        justify-content: center
-        margin: 0 0 10px
-        &:last-child
-          width: 100%
-          margin: 0
 
-  .btn-burger
-    position: absolute
-    right: 10px
-    top: 0
 
   .phone-icon
     width: 12px
@@ -765,7 +858,9 @@
   .result-box
     margin: 90px 10px 30px
 
-
+  .main-about__img
+    width: 100px
+    margin: -130px 0 0 auto
 
 @media only screen and (max-width : 420px)
   .indications:after

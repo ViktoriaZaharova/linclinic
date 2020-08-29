@@ -135,6 +135,7 @@ a
   flex-direction: column
   align-items: center
 
+
 .main-menu
   display: flex
   flex-direction: column
@@ -151,8 +152,16 @@ a
       color: #494ea3
       font-size: 20px
       padding: 10px 0
-      border-left: 5px solid transparent
-
+      position: relative
+      &:before
+        content: ''
+        position: absolute
+        left: 0
+        top: 0
+        height: 100%
+        width: 5px
+        background: transparent
+        transition: .3s ease
       &:hover
         background-image: linear-gradient(to right, #fff, #dadbf2)
 
@@ -161,7 +170,8 @@ a
       color: #494ea3
       font-weight: bold
       font-size: 20px
-      border-left: 5px solid #494ea3
+      &:before
+        background: #494ea3
 
 h1
   margin: 51px 0 15px
@@ -257,7 +267,8 @@ h2
   top: 0
   z-index: 2
   width: 100%
-
+  .logo
+    display: none
   .container
     align-items: center
     justify-content: center
@@ -297,6 +308,7 @@ h2
   display: flex
   align-items: center
   justify-content: center
+  max-width: 85px
 
 .main-home__img
   position: absolute
@@ -415,14 +427,17 @@ h2
   z-index: 1
   margin: -140px 0 0
 
+.d-mobile
+  display: none
+
 .main-about__advantages
   position: relative
   margin: 0 0 22px
 
   &:before
     content: ''
-    width: 353px
-    height: 220px
+    width: 100%
+    height: 100%
     opacity: 0.3
     border-radius: 12px
     background-image: linear-gradient(to top, #9093ca, #b1b4e1)
@@ -548,7 +563,10 @@ h2
   max-width: 460px
   width: 100%
   font-size: 14px
-
+  a
+    display: inline
+    text-decoration: underline
+    color: #fff
   p
     margin: 0 0 20px
 
@@ -587,10 +605,10 @@ h2
     background: transparent
 
 .main-features__wrapper-content
-  padding: 140px 100px 0 65px
+  padding: 180px 100px 0 65px
   background: #f9dfe9
   border-radius: 0 478px 478px 0
-  margin: -200px 0 0 0
+  margin: -150px 0 0 0
   position: relative
   overflow: hidden
 
@@ -706,7 +724,7 @@ h2
 
 
 .main-features-certificate
-  width: 312px
+  width: 300px
   display: flex
   align-items: center
   justify-content: center
@@ -775,12 +793,10 @@ h2
   position: relative
   z-index: 1
   .slick-center
-    .img-after, .twentytwenty-handle
+    .img-after
       display: block
-
-    .before-and-after
-      display: flex
-
+    .img-before
+      width: 50%
     .result-box
       z-index: 2
       background: #fff
@@ -795,13 +811,19 @@ h2
     .result-box__photo
       border: none
       border-radius: 0
+      height: 426px
+      position: relative
 
       &:before
-        display: none
-
-    .twentytwenty-wrapper
-      height: 426px
-
+        content: ''
+        position: absolute
+        left: 50%
+        top: 0
+        width: 3px
+        background: #fff
+        transform: translate(-50%,0)
+        z-index: 1
+        opacity: 1
     .name-clients
       padding: 0
       font-size: 26px
@@ -809,14 +831,15 @@ h2
 
       &:before
         display: none
+    .before-and-after
+      display: flex
 
-
-.twentytwenty-horizontal .twentytwenty-handle:before, .twentytwenty-horizontal .twentytwenty-handle:after
-  box-shadow: none
-
-.twentytwenty-handle
-  border: none
-  box-shadow: none
+//.twentytwenty-horizontal .twentytwenty-handle:before, .twentytwenty-horizontal .twentytwenty-handle:after
+//  box-shadow: none
+//
+//.twentytwenty-handle
+//  border: none
+//  box-shadow: none
 
 .result-box
   width: 317px
@@ -825,25 +848,28 @@ h2
   margin: 160px 30px 49px
 
 
-.twentytwenty-horizontal .twentytwenty-handle:after
-  display: none
+//.twentytwenty-horizontal .twentytwenty-handle:after
+//  display: none
+//
+//.twentytwenty-horizontal .twentytwenty-handle:before
+//  bottom: -1000%
+//  margin: 0
 
-.twentytwenty-horizontal .twentytwenty-handle:before
-  bottom: -1000%
-  margin: 0
 
-
-.twentytwenty-wrapper
-  height: 353px
-  width: 100%
+//.twentytwenty-wrapper
+//  height: 353px
+//  width: 100%
 
 .result-box__photo
   width: 100%
-  height: 100% !important
+  height: 305px
   border-radius: 10px
   border: solid 25px #c3c6ff
   box-sizing: border-box
   position: relative
+  display: flex
+  align-items: stretch
+
 
   &:before
     content: ''
@@ -858,12 +884,16 @@ h2
 
   img
     height: 100%
-    width: 100%
+    width: 50%
     object-fit: cover
+  .img-before
+    display: block
+    width: 100%
+  .img-after
+    display: none
 
 .slick-slide
   outline: none
-
 
 .result-box__content
   padding: 26px 0 0
@@ -881,7 +911,6 @@ h2
   text-transform: uppercase
   font-size: 15.5px
   letter-spacing: 1.55px
-  margin: 0 0 37px
 
   p
     position: relative
@@ -972,6 +1001,9 @@ h2
   max-width: 1300px
   position: relative
   z-index: 1
+  .slick-arrow
+    width: 27px
+    height: 13px
 
 //main-price
 .main-price
@@ -1355,6 +1387,9 @@ h2
     width: 100%
     height: 100%
     object-fit: cover
+  iframe
+    width: 100%
+    height: 100%
 
 .video-title
   font-size: 28.5px
@@ -1645,6 +1680,107 @@ blockquote
     width: 100%
     height: 2px
     background: #fff
+    transition: .3s ease
+
+.btn-burger.click
+  span
+    &:nth-child(2)
+      width: 0
+      height: 0
+    &:first-child
+      transform: rotate(45deg)
+      margin: 7px 0 0 0
+    &:last-child
+      transform: rotate(-45deg)
+      margin: 0 0 7px
+
+.overlay-menu
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  z-index: 1
+  background: #000
+  opacity: .4
+  display: none
+
+//modal
+.modalWindow
+  max-width: 460px
+  width: 100%
+  padding: 40px 20px
+  border-radius: 15px
+  background: linear-gradient(to top, #a3a4d2, #cecffb)
+
+.modal-body
+  width: 100%
+  height: 100%
+  display: flex
+  flex-direction: column
+  align-items: center
+  form
+    width: 100%
+    margin: 30px auto 0
+    button
+      margin: 20px auto 0
+
+.modal-title
+  text-align: center
+  font-size: 25px
+  font-weight: bold
+  color: #444
+
+.modal-description
+  font-size: 20px
+  text-align: center
+  max-width: 250px
+  margin: 0 auto
+  color: #444
+
+label
+  display: block
+
+input
+  outline: none
+  width: 100%
+  box-sizing: border-box
+  padding: 0 0 0 20px
+  border-radius: 29px
+  height: 58px
+  border: 1px solid #d9dee3
+  color: #54595f
+  font-family: $default-font
+  font-size: 16px
+  background: #fff
+  &::placeholder
+    color: #54595f
+
+.yes_no
+  position: relative
+  padding: 0 0 0 30px
+  margin: 15px 0 0
+  cursor: pointer
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 50%
+    transform: translate(0,-50%)
+    border: 1px solid #f7586f
+      radius: 5px
+    background: url("../img/check2.png") no-repeat center
+      size: contain
+    width: 20px
+    height: 20px
+  a
+    text-decoration: underline
+    font-size: 12px
+    color: #444
+
+.yes_no.active
+  &:before
+    background: transparent
 
 @import "media"
 // Всегда в конце

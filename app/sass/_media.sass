@@ -46,7 +46,7 @@
     max-width: 455px
 
   .main-features-box2
-    max-width: 390px
+    max-width: 380px
 
   .main-features-box4
     max-width: 265px
@@ -73,11 +73,15 @@
   .main-features-img
     left: 400px
 
+  .main-features-box1
+    margin-right: 218px
+
   .main-features-box4
-    margin: 0 0 185px 600px
+    margin: 0 0 185px 700px
 
   .main-features-box3
-    margin: 0 0 140px
+    margin: 0 0 115px
+    max-width: 400px
 
   .main-features .vertical-scrolling__wrapper
     padding: 0 120px 0 0
@@ -88,6 +92,10 @@
 
   .main-features-certificate
     width: 260px
+
+  .main-features-description
+    max-width: 380px
+    margin-right: 290px
 
 @media only screen and (max-width : 1620px)
   .about-services__images
@@ -102,6 +110,9 @@
   .about-services__total
     margin: 30px 0 0
     padding: 40px 130px
+
+  .main-features-description
+    margin-right: 280px
 
 @media only screen and (max-width : 1600px)
   .main-home__content
@@ -126,7 +137,7 @@
     display: none
 
   .main-features-img
-    left: 350px
+    left: 360px
     width: 230px
 
   .main-price__advantages
@@ -170,13 +181,23 @@
     padding: 0 15px 0 0
 
   .main-features-box
-    max-width: 36%
+    max-width: 35%
+    br
+      display: none
 
   .result-box
     width: 270px
 
   .result-slider .slick-center .result-box
     margin: 20px 0 49px
+
+  .main-features-description
+    margin-right: 200px
+
+  .main-features-box4
+    margin: 0 0 185px 580px
+
+
 
 @media only screen and (max-width : 1440px)
   .main-home__img
@@ -219,7 +240,7 @@
     margin: 0 0 180px 500px
 
   .main-features-img
-    left: 295px
+    left: 315px
 
   .indications .vertical-scrolling__wrapper
     padding: 50px 0 100px 50px
@@ -281,13 +302,16 @@
         display: none
 
   .main-features-description
-    max-width: none
-    width: 100%
-    margin: 0 0 20px
-    order: 2
-    p
-      max-width: none
+    display: none
 
+
+
+  .main-features-box1
+    .text
+      p
+        display: none
+      .d-mobile
+        display: block
 
   .main-features-img
     position: relative
@@ -534,7 +558,6 @@
     max-width: 655px
     margin: -120px auto 0
 
-  .indications .vertical-scrolling__wrapper:before
 
 
   .indications .vertical-scrolling__wrapper
@@ -574,7 +597,7 @@
     .logo
       display: flex
       margin: 0 auto 0 0
-      max-width: 40px
+      max-width: 30px
     .container
       padding: 0 15px
 
@@ -625,6 +648,8 @@
   .main-header .phone
     margin: 0 10px 0 0
 
+
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 690px)
   .phone
@@ -666,6 +691,9 @@
 
   .result-box__photo
     border-width: 15px
+
+  .result-box
+    margin: 60px 30px 40px
 
   .video-wrapper
     max-width: 400px
@@ -746,6 +774,13 @@
 @media only screen and (max-width : 575px)
   .main-header
     padding: 10px
+    position: fixed
+    .phone
+      margin: 0
+      display: none
+    .phone-mobile
+      display: flex
+      margin: 0 20px 0 0
 
   .main-menu li a, .main-menu li .active
     font-size: 16px
@@ -759,14 +794,6 @@
   .main-header .container
     justify-content: space-between
 
-  .main-header
-    .phone
-      margin: 0
-      display: none
-    .phone-mobile
-      display: flex
-      margin: 0 20px 0 0
-
   .main-about__box
     padding: 30px
 
@@ -774,7 +801,7 @@
     position: relative
     left: 0
     top: 0
-    margin: -180px 0 0 auto
+    margin: -180px 50px 0 auto
 
   .main-home__img
     display: none
@@ -804,11 +831,15 @@
   .main-features-description
     display: none
 
-  .d-mobile
-    display: block
+
+
+  .result-box__photo
+    border-width: 7px
 
   .result-slider .slick-center .result-box
     margin: 20px 0 29px
+    padding: 20px 10px
+    border-width: 5px
 
   .main-features__content
     margin: 30px 0 0
@@ -896,11 +927,15 @@
   .result-slider .slick-center .result-box
     width: 280px
 
-  .result-slider .slick-center .twentytwenty-wrapper
-    height: 340px
+  .result-slider .slick-center .result-box__photo
+    height: 240px
 
   .result-box
-    margin: 90px 10px 30px
+    margin: 60px 10px 30px
+    width: 200px
+
+  .result-box__photo
+    height: 230px
 
   .main-about__img
     width: 100px
@@ -917,7 +952,7 @@
     padding: 30px 15px
 
 
-@media only screen and (max-height : 950px)
+@media only screen and (max-height : 800px)
   .btn-scroll
-    margin: 0 0 50px -120px
+    margin: 0 0 50px -100px
 

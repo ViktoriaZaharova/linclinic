@@ -43,8 +43,6 @@ gulp.task('libs-js', function(){
   return gulp.src([
     'app/libs/slick/slick.min.js',
     'app/libs/fullpage/fullpage.js',
-    'app/libs/twentytwenty/jquery.event.move.js',
-    'app/libs/twentytwenty/jquery.twentytwenty.js',
   ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())
